@@ -1,0 +1,81 @@
+Import pygame 
+
+Import time 
+
+Import random 
+
+ 
+
+Pygame.init() 
+
+ 
+
+# Define colors 
+
+White = (255, 255, 255) 
+
+Yellow = (255, 255, 102) 
+
+Black = (0, 0, 0) 
+
+Red = (213, 50, 80) 
+
+Green = (0, 255, 0) 
+
+Blue = (50, 153, 213) 
+
+ 
+
+# Set up the game window 
+
+Dis_width = 600 
+
+Dis_height = 400 
+
+Dis = pygame.display.set_mode((dis_width, dis_height)) 
+
+Pygame.display.set_caption(‘Snake Game by OpenAI’) 
+
+ 
+
+# Set up game clock 
+
+Clock = pygame.time.Clock() 
+
+ 
+
+Snake_block = 10 
+
+Snake_speed = 15 
+
+ 
+
+Font_style = pygame.font.SysFont(None, 50) 
+
+ 
+
+ 
+
+Def our_snake(snake_block, snake_list): 
+
+    For x in snake_list: 
+
+        Pygame.draw.rect(dis, green, [x[0], x[1], snake_block, snake_block]) 
+
+ 
+
+ 
+
+Def message(msg, color): 
+
+    Mesg = font_style.render(msg, True, color) 
+
+    Dis.blit(mesg, [dis_width / 6, dis_height / 3]) 
+
+ 
+
+ 
+
+Def gameLoop(): 
+
+    
